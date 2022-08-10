@@ -5,7 +5,7 @@ VOLUME /tmp
 ARG JAVA_OPTS
 ENV JAVA_OPTS=$JAVA_OPTS
 
-COPY runaway.jar runaway.jar
+COPY runaway.war runaway.war
 
 EXPOSE 3000
 
