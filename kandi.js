@@ -378,10 +378,10 @@
     // add properties directly to the player imported object
     player.width     = 60;
     player.height    = 96;
-    player.speed     = 6;
+    player.speed     = 10;
   
     // jumping
-    player.gravity   = 1;
+    player.gravity   = 0;
     player.dy        = 0;
     player.jumpDy    = -10;
     player.isFalling = false;
@@ -621,7 +621,7 @@
    */
   function spawnSprites() {
     // increase score
-    score=(score+2)*2;
+    score=score++;
   
     // first create a gap
     if (gapLength > 0) {
