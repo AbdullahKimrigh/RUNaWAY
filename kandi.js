@@ -378,10 +378,10 @@
     // add properties directly to the player imported object
     player.width     = 60;
     player.height    = 96;
-    player.speed     = 10;
+    player.speed     = 6;
   
     // jumping
-    player.gravity   = 0;
+    player.gravity   = 1;
     player.dy        = 0;
     player.jumpDy    = -10;
     player.isFalling = false;
@@ -404,7 +404,7 @@
     player.update = function() {
   
       // jump if not currently jumping or falling
-      if (KEY_STATUS.click && player.dy === 0 && !player.isJumping) {
+      if (KEY_STATUS.space && player.dy === 0 && !player.isJumping) {
         player.isJumping = true;
         player.dy = player.jumpDy;
         jumpCounter = 12;
@@ -412,7 +412,7 @@
       }
   
       // jump higher if the space bar is continually pressed
-      if (KEY_STATUS.click && jumpCounter) {
+      if (KEY_STATUS.space && jumpCounter) {
         player.dy = player.jumpDy;
       }
   
@@ -621,7 +621,7 @@
    */
   function spawnSprites() {
     // increase score
-    score=score++;
+    score++;
   
     // first create a gap
     if (gapLength > 0) {
@@ -714,7 +714,9 @@
       updateEnemies();
   
       // draw the score
-      ctx.fillText('Score: ' + score + 'm', canvas.width - 140, 30);
+      ctx.fillText('Score: ' + score + 'm', canvas.width - 160, 30);
+      ctx.fillText('Name: ' + 'Chandra Arya', canvas.width - 160, 45);
+      ctx.fillText('Class: ' + 'DevOps online', canvas.width - 160, 60);
   
       // spawn a new Sprite
       if (ticker % Math.floor(platformWidth / player.speed) === 0) {
@@ -749,7 +751,7 @@
    * Keep track of the spacebar events
    */
   var KEY_CODES = {
-    32: 'Click'
+    32: 'space'
   };
   var KEY_STATUS = {};
   for (var code in KEY_CODES) {

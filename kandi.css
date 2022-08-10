@@ -18,8 +18,8 @@ canvas {
   left: 0;
   border: 1px solid black;
   z-index: 1;
-  width: 700px;
-  height: 500px;
+  width: 600px;
+  height: 360px;
 }
 
 ul {
