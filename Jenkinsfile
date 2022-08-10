@@ -4,8 +4,8 @@ pipeline {
 
 	environment {
 		DOCKERHUB_CREDENTIALS=credentials('AbdullahKimrigh-dockerhub-token')
-		AWS_ACCESS_KEY_ID     = credentials('jenkins-aws-secret-key-id')
-  		AWS_SECRET_ACCESS_KEY = credentials('jenkins-aws-secret-access-key')
+		AWS_ACCESS_KEY_ID     = credentials('AbdullahKimrigh-aws-secret-key-id')
+  		AWS_SECRET_ACCESS_KEY = credentials('AbdullahKimrigh-aws-secret-access-key')
 		ARTIFACT_NAME = 'Dockerrun.aws.json'
 		AWS_S3_BUCKET = 'runaway-game-file'
 		AWS_EB_APP_NAME = 'runaway-game'
