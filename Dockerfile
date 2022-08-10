@@ -1,5 +1,5 @@
-FROM nginx
-VOLUME [ "tmp" ]
+
+FROM nginx:alpine
 COPY . /usr/share/nginx/html
-COPY . /var/www
+VOLUME [ "tmp" ]
 EXPOSE 80
