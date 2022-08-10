@@ -18,7 +18,7 @@ pipeline {
         stage('Build') {
 
 			steps {
-				sh 'docker build -t abdullahkimrigh/run-a-way-game:0.1 .'
+				sh 'docker build -t abdullahkimrigh/run-a-way-game:0.2 .'
 			}
 		}
 
