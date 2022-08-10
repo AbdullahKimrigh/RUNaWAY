@@ -7,7 +7,7 @@ pipeline {
 		AWS_ACCESS_KEY_ID     = credentials('AbdullahKimrigh-aws-secret-key-id')
   		AWS_SECRET_ACCESS_KEY = credentials('AbdullahKimrigh-aws-secret-access-key')
 		ARTIFACT_NAME = 'Dockerrun.aws.json'
-		AWS_S3_BUCKET = 'runaway-game-file'
+		AWS_S3_BUCKET = 'abdullah-kimrigh-belt2-artifacts-123456'
 		AWS_EB_APP_NAME = 'runaway-game'
         AWS_EB_ENVIRONMENT_NAME = 'Runawaygame-env'
         AWS_EB_APP_VERSION = "${BUILD_ID}"
