@@ -1,3 +1,4 @@
+
 FROM node:latest
 LABEL author: abdullahkimrigh
 
@@ -6,7 +7,6 @@ WORKDIR /var/www
 
 EXPOSE 3000
 
-RUN npm install
-
-CMD ["npm", "start"]
 VOLUME [/var/www]
+
+ENTRYPOINT exec java $JAVA_OPTS -jar runaway.jar
